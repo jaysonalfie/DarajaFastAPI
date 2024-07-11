@@ -1,0 +1,6 @@
+Uvicorn
+FastAPI
+requests
+gunicorn
+python-dotenv
+hypercorn
