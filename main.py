@@ -126,7 +126,7 @@ async def mpesa_callback(request: Request):
     try:
         payload = await request.json()
     except ValueError:
-        return JSONResponse(status_code=400, content={"error": "Invalid JSON"})
+        return JSONResponse(status_code=400, content={"error": ValueError})
 
     # Print the received callback data
     print("Received M-Pesa Callback:")
