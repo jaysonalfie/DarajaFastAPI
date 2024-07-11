@@ -133,3 +133,7 @@ async def mpesa_callback(request: Request):
     print(json.dumps(payload, indent=2))
 
 # FastAPI doesn't require the if __name__ == '__main__' block for running the app
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
